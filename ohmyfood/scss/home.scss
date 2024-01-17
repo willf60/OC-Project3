@@ -1,0 +1,16 @@
+@import 'config';
+
+.return-button {
+    display:none;
+} 
+
+.chosen-location {
+    @include flexCenter(row);
+    background: map-get($colors, backdrop);
+    padding: 15px; 
+    font-family: map-get($fonts, text);
+}
+
+.fa-map-pin {
+    padding-right: 20px;
+}

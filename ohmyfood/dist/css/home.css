@@ -1,0 +1,17 @@
+.return-button {
+  display: none;
+}
+
+.chosen-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #F3F3F3;
+  padding: 15px;
+  font-family: Roboto;
+}
+
+.fa-map-pin {
+  padding-right: 20px;
+}/*# sourceMappingURL=home.css.map */

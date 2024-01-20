@@ -4,8 +4,17 @@
     @return map-get($colors, $color-name);
 }
 
+html {
+    background:map-get($colors, backdrop);
+}
+
+body {
+    @include reset;
+}
+
 header {
-    padding: 20px;
+    background: white;
+    padding: 20px 8px 10px;
 }
 
 .logo-container {
@@ -14,7 +23,7 @@ header {
 }
 
 .logo {
-    height: 30px;
+    height: 27px;
 }
 
 .return-button {
@@ -23,3 +32,35 @@ header {
     rotate: 270deg;
 }
 
+.footer {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-logo {
+    @include whiteFilter;
+    height: 16px;
+    padding-bottom: 15px;
+}
+
+.footer-content {
+    background: map-get($colors, footer-backdrop);
+    padding: 20px;
+    color: white;
+    font-family: map-get($fonts, text);
+    font-size: 15px;
+    font-weight: 350;
+}
+
+.footer-line {
+    padding: 3px;
+}
+
+.fa-cutlery {
+    padding-right: 12px;
+}
+
+.fa-handshake {
+    padding-right: 10px;
+    rotate: 315deg;
+}

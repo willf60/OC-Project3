@@ -1,5 +1,15 @@
+html {
+  background: #F6F6F6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 header {
-  padding: 20px;
+  background: white;
+  padding: 20px 8px 10px;
 }
 
 .logo-container {
@@ -8,7 +18,7 @@ header {
 }
 
 .logo {
-  height: 30px;
+  height: 27px;
 }
 
 .return-button {
@@ -21,4 +31,37 @@ header {
   outline: inherit;
   margin-left: -20px;
   rotate: 270deg;
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-logo {
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(114deg) brightness(106%) contrast(101%);
+  height: 16px;
+  padding-bottom: 15px;
+}
+
+.footer-content {
+  background: #353535;
+  padding: 20px;
+  color: white;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 350;
+}
+
+.footer-line {
+  padding: 3px;
+}
+
+.fa-cutlery {
+  padding-right: 12px;
+}
+
+.fa-handshake {
+  padding-right: 10px;
+  rotate: 315deg;
 }/*# sourceMappingURL=main.css.map */

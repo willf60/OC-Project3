@@ -7,11 +7,122 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background: #F3F3F3;
+  background: #EAEAEA;
   padding: 15px;
   font-family: Roboto;
+  font-size: 14px;
 }
 
-.fa-map-pin {
-  padding-right: 20px;
+.fa-map-marker-alt {
+  padding-right: 10px;
+  color: #353535;
+}
+
+.slogan-and-explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 200px;
+  padding: 20px 0 40px;
+}
+
+.slogan-big {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.slogan-small {
+  font-family: Roboto;
+  font-weight: 200;
+  text-align: center;
+}
+
+.explore-button {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: Roboto;
+  padding: 15px 10px 15px 10px;
+  width: 60%;
+}
+
+.instructions-section {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.instructions-title {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+
+.steps-master-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 270px;
+  padding-top: 15px;
+}
+
+.step-number-and-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.step-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #9356DC;
+  border: 2px solid #9356DC;
+  border-radius: 50px;
+  color: white;
+  font-family: Roboto;
+  font-size: 13px;
+  transform: translate(13px);
+  width: 18px;
+  height: 18px;
+}
+
+.step-content-container {
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.2);
+  background: #F6F6F6;
+  border-radius: 20px;
+  display: flex;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 450;
+  height: 70px;
+  width: 280px;
+}
+
+.step-text {
+  align-self: center;
+}
+
+.fa-mobile, .fa-list, .fa-shop {
+  padding: 0 20px 0 30px;
+  align-self: center;
+}
+
+.fa-mobile, .fa-list {
+  color: grey;
+}
+
+.fa-shop {
+  color: #9356DC;
 }/*# sourceMappingURL=home.css.map */

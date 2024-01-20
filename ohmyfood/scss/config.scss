@@ -3,7 +3,10 @@ $colors: (
     "secondary": #FF79DA,
     "tertiary": #99E2D0,
     "tertiary-text": #008766,
-    "backdrop": #F3F3F3
+    "backdrop": #F6F6F6,
+    "darker-backdrop": #EAEAEA,
+    "footer-backdrop": #353535
+
 );
 
 $fonts: (
@@ -28,4 +31,19 @@ $fonts: (
     flex-direction: $direction;
 }
 
+@mixin whiteFilter {
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(114deg) brightness(106%) contrast(101%);
+}
 
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin button-gradient {
+    background: linear-gradient(to top, map-get($colors, primary),map-get($colors, secondary));
+}
+
+@mixin shadow {
+    box-shadow:2px 4px 10px 0 rgba(0, 0, 0, 0.2);
+}

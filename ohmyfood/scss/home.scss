@@ -25,9 +25,7 @@
 }
 
 .slogan-big {
-    font-family: map-get($fonts, text);
-    font-size: 22px;
-    font-weight: 500;
+    @include homepage-title;
 }
 
 .slogan-small {
@@ -55,9 +53,7 @@
 }
 
 .instructions-title {
-    font-family: map-get($fonts, text);
-    font-size: 22px;
-    font-weight: 500;
+    @include homepage-title;
     padding-top: 40px;
     padding-left: 20px;
 }
@@ -94,7 +90,7 @@
     border-radius: 20px;
     display: flex;
     font-family: map-get($fonts, text);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 450;
     height: 70px;
     width: 280px;
@@ -113,7 +109,46 @@
     color: grey;
 }
 .fa-shop {
-    color: map-get($colors, primary )
+    color: map-get($colors, primary);
 }
+
+.restaurants-title {
+    @include homepage-title;
+    padding-top: 45px;
+    padding-bottom: 25px;
+}
+
+.kitchen-west-container {
+    background: white; 
+    width: 350px;
+}
+
+.restaurant-img {
+    height: 160px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 350px;
+}
+
+.new-tag {
+    @include flexCenter(row);
+    background: map-get($colors, tertiary);
+    color: map-get($colors, tertiary-text);
+    font-family: map-get($fonts, text);
+    font-size: 13px;
+    height: 27px;
+    transform: translate(-80px, 10px);
+    width: 70px;
+
+}
+
+.restaurant-card-main {
+    @include flexCenter(row);
+
+}
+
+
+
+
 
 

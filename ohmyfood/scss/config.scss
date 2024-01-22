@@ -6,7 +6,6 @@ $colors: (
     "backdrop": #F6F6F6,
     "darker-backdrop": #EAEAEA,
     "footer-backdrop": #353535
-
 );
 
 $fonts: (
@@ -46,4 +45,10 @@ $fonts: (
 
 @mixin shadow {
     box-shadow:2px 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin homepage-title {
+    font-family: map-get($fonts, text);
+    font-size: 22px;
+    font-weight: 500;
 }

@@ -104,7 +104,7 @@
   border-radius: 20px;
   display: flex;
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 450;
   height: 70px;
   width: 280px;
@@ -125,4 +125,45 @@
 
 .fa-shop {
   color: #9356DC;
+}
+
+.restaurants-title {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 500;
+  padding-top: 45px;
+  padding-bottom: 25px;
+}
+
+.kitchen-west-container {
+  background: white;
+  width: 350px;
+}
+
+.restaurant-img {
+  height: 160px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 350px;
+}
+
+.new-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #99E2D0;
+  color: #008766;
+  font-family: Roboto;
+  font-size: 13px;
+  height: 27px;
+  transform: translate(-80px, 10px);
+  width: 70px;
+}
+
+.restaurant-card-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }/*# sourceMappingURL=home.css.map */

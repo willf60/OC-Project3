@@ -8,10 +8,18 @@ $colors: (
     "footer-backdrop": #353535
 );
 
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
 $fonts: (
     "title": Shrikhand,
     "text": Roboto
 );
+
+@function font($font-name) {
+    @return map-get($fonts, $font-name);
+}
 
 @mixin remove-button-style {
     background: none;

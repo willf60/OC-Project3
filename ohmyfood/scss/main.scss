@@ -1,11 +1,7 @@
 @import 'config';
 
-@function color($color-name) {
-    @return map-get($colors, $color-name);
-}
-
 html {
-    background:map-get($colors, backdrop);
+    background:color(backdrop);
 }
 
 body {
@@ -44,10 +40,10 @@ header {
 }
 
 .footer-content {
-    background: map-get($colors, footer-backdrop);
+    background: color(footer-backdrop);
     padding: 20px;
     color: white;
-    font-family: map-get($fonts, text);
+    font-family: font(text);
     font-size: 15px;
     font-weight: 350;
 }

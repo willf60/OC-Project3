@@ -91,7 +91,7 @@
   border: 2px solid #9356DC;
   border-radius: 50px;
   color: white;
-  font-family: Roboto;
+  font-family: font text;
   font-size: 13px;
   transform: translate(13px);
   width: 18px;
@@ -127,24 +127,67 @@
   color: #9356DC;
 }
 
+.restaurants {
+  height: 1000px;
+}
+
 .restaurants-title {
   font-family: Roboto;
   font-size: 22px;
   font-weight: 500;
-  padding-top: 45px;
-  padding-bottom: 25px;
+  padding: 40px 0px 5px 15px;
 }
 
-.kitchen-west-container {
-  background: white;
-  width: 350px;
+.restaurants-master-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 878px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 285px;
+  height: 200px;
 }
 
 .restaurant-img {
-  height: 160px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  width: 350px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.restaurant-card-details {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.restaurant-card-content {
+  padding: 15px 0px 10px 10px;
+}
+
+.card-content-title {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.card-content-location {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 5px;
 }
 
 .new-tag {
@@ -153,17 +196,29 @@
   align-items: center;
   flex-direction: row;
   background: #99E2D0;
+  border-radius: 2px;
   color: #008766;
   font-family: Roboto;
-  font-size: 13px;
-  height: 27px;
-  transform: translate(-80px, 10px);
-  width: 70px;
+  font-size: 11px;
+  height: 22px;
+  transform: translate(20px, -150px);
+  width: 62px;
 }
 
-.restaurant-card-main {
+.heart-and-new-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+.heart-button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: purple;
+  padding: 0 15px 25px 0;
 }/*# sourceMappingURL=home.css.map */

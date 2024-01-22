@@ -6,9 +6,9 @@
 
 .chosen-location {
     @include flexCenter(row);
-    background: map-get($colors, darker-backdrop);
+    background: color(darker-backdrop);
     padding: 15px; 
-    font-family: map-get($fonts, text);
+    font-family: font(text);
     font-size: 14px;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .slogan-small {
-    font-family: map-get($fonts, text);
+    font-family: font(text);
     font-weight: 200;
     text-align: center;
 }
@@ -40,7 +40,7 @@
     border: none;
     border-radius: 25px;
     color: white;
-    font-family: map-get($fonts, text);
+    font-family: font(text);
     padding: 15px 10px 15px 10px;
     width: 60%;
 }
@@ -73,11 +73,11 @@
 
 .step-number {
     @include flexCenter(row);
-    background-color: map-get($colors, primary );
-    border: 2px solid map-get($colors , primary);
+    background-color: color(primary);
+    border: 2px solid color(primary);
     border-radius: 50px;
     color: white;
-    font-family: map-get($fonts, text );
+    font-family: font (text);
     font-size: 13px;
     transform: translate(13px);
     width: 18px;
@@ -86,10 +86,10 @@
 
 .step-content-container {
     @include shadow;
-    background: map-get($colors, backdrop);
+    background: color(backdrop);
     border-radius: 20px;
     display: flex;
-    font-family: map-get($fonts, text);
+    font-family: font(text);
     font-size: 14px;
     font-weight: 450;
     height: 70px;
@@ -109,43 +109,91 @@
     color: grey;
 }
 .fa-shop {
-    color: map-get($colors, primary);
+    color: color(primary);
+}
+
+.restaurants {
+    height: 1000px;
 }
 
 .restaurants-title {
     @include homepage-title;
-    padding-top: 45px;
-    padding-bottom: 25px;
+    padding: 40px 0px 5px 15px;
 }
 
-.kitchen-west-container {
-    background: white; 
-    width: 350px;
+.restaurants-master-container {
+    @include flexCenter(row);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 878px;
+}
+
+.card-container { 
+    display: flex;
+    flex-direction: column;
+    width: 285px;
+    height: 200px;
 }
 
 .restaurant-img {
-    height: 160px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    width: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 140px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.restaurant-card-details {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.restaurant-card-content {
+    padding: 15px 0px 10px 10px;
+}
+
+.card-content-title {
+    font-family: font(text);
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.card-content-location {
+    font-family: font(text);
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 5px;
 }
 
 .new-tag {
     @include flexCenter(row);
-    background: map-get($colors, tertiary);
-    color: map-get($colors, tertiary-text);
-    font-family: map-get($fonts, text);
-    font-size: 13px;
-    height: 27px;
-    transform: translate(-80px, 10px);
-    width: 70px;
-
+    background: color(tertiary);
+    border-radius: 2px;
+    color: color(tertiary-text);
+    font-family: font(text);
+    font-size: 11px;
+    height: 22px;
+    transform: translate(20px, -150px);
+    width: 62px;
 }
 
-.restaurant-card-main {
-    @include flexCenter(row);
-
+.heart-and-new-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
 }
+
+.heart-button {
+    @include remove-button-style;
+    color: purple;
+    padding: 0 15px 25px 0;
+}
+
+
 
 
 

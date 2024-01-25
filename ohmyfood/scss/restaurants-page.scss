@@ -1,0 +1,75 @@
+@import 'config';
+
+
+.restaurant-img {
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.restaurant-page {
+    background: color(backdrop);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 25px 10px 15px 10px;
+    transform: translate(0, -55px);
+}
+
+.title-and-heart {
+    @include flexCenter(row);
+    justify-content: space-between;
+    width: 95%;
+    padding: 0 0 20px 5px;
+}
+
+.restaurant-title {
+    @include restaurant-page-title;
+}
+
+.fa-heart-o {   /** add this code to config once done to avoid repitition**/
+    color: black;
+    scale:(1.3);
+    &:hover {
+        color: red;
+    }
+}
+
+.starters-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 5px;
+}
+
+.menu-title {
+    border-bottom: 3px solid color(tertiary);
+    font-family: font(text);
+    font-weight: 300;
+    font-size: 14px;
+    padding-bottom: 5px;
+    margin-right: 265px;
+    
+}
+
+.menu-item {
+    @include shadow;
+    background: white;
+    border-radius: 15px;
+    font-family: font(text);
+    padding: 10px;
+}
+
+.item-name {
+    font-size: 15px;
+}
+
+.description-and-price-container {
+    @include flexCenter(row);
+    justify-content: space-between;
+}
+
+.item-description {
+    font-size: 13px;
+    font-weight: 300;
+}
+

@@ -47,16 +47,42 @@ $fonts: (
     padding: 0;
 }
 
-@mixin button-gradient {
-    background: linear-gradient(to top, map-get($colors, primary),map-get($colors, secondary));
+@mixin button-gradient-background {
+    background: linear-gradient(to top, color(primary), color(secondary));
+}
+
+@mixin button-gradient-color {
+    color: linear-gradient(to top, color(primary), color(secondary));
+}
+
+@mixin btn-static {
+    box-shadow:2px 4px 10px 0 rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-family: font(text);
+    padding: 15px 10px 15px 10px;
+    width: 60%;
 }
 
 @mixin shadow {
-    box-shadow:2px 4px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow:6px 8px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin btn-hover-effect {
+    box-shadow:6px 8px 14px 0 rgba(0, 0, 0, 0.2);
+    filter: brightness(110%);
 }
 
 @mixin homepage-title {
-    font-family: map-get($fonts, text);
+    font-family: font(text);
     font-size: 22px;
     font-weight: 500;
+}
+
+@mixin restaurant-page-title {
+    font-family: font(title);
+    font-size: 25px;
+    color: #101010;
+
 }

@@ -36,15 +36,6 @@ header {
     rotate: 270deg;
     scale: 0.7;
     color: #101010;
-
-}
-
-.fa-heart {
-    @include button-gradient-color;
-}
-
-.heart-button {
-    @include remove-button-style;
 }
 
 .footer {

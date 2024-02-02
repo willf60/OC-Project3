@@ -3,7 +3,7 @@
 
 .restaurant-img {
     height: 240px;
-    object-fit: cover;
+    object-fit:cover;
     width: 100%;
 }
 
@@ -11,7 +11,8 @@
     background: color(backdrop);
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    padding: 25px 10px 15px 10px;
+    height: auto;
+    padding: 25px 0px 15px 0px;
     transform: translate(0, -55px);
 }
 
@@ -24,21 +25,22 @@
 
 .restaurant-title {
     @include restaurant-page-title;
-}
-
-.fa-heart-o {   /** add this code to config once done to avoid repitition**/
-    color: black;
-    scale:(1.3);
-    &:hover {
-        color: red;
-    }
+    padding-left: 10px;
 }
 
 .starters-container {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-top: 5px;
+    @include item-container-format;
+    @include fade-in-animation-fast
+}
+
+.mains-container {
+    @include item-container-format;
+    @include fade-in-animation-slow;
+}
+
+.desserts-container {
+    @include item-container-format;
+    @include fade-in-animation-slower;
 }
 
 .menu-title {
@@ -47,20 +49,74 @@
     font-weight: 300;
     font-size: 14px;
     padding-bottom: 5px;
-    margin-right: 265px;
-    
+    margin-right: 275px;
+    margin-left: 10px;
 }
 
 .menu-item {
     @include shadow;
     background: white;
-    border-radius: 15px;
+    border-radius: 12px;
     font-family: font(text);
-    padding: 10px;
+    padding: 14px;
+    width: 100%;
+}
+
+.item-tick-container {
+    @include flexCenter(row);
+    flex-wrap: no-wrap;
+    width: 100%;
+}
+
+.menu-item1 {
+    @include shadow;
+    background: white;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-family: font(text);
+    height: 35px;
+    padding: 14px;
+    width: 700px;
+    :hover > & {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.tick-container {
+    display: none;
+    :hover > & { 
+        @include shadow;
+        @include flexCenter(row);
+        @include slide-left-animation;
+        background: color(tertiary);
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        font-family: font(text);
+        padding: 14px;
+        height: 35px;
+        width: 10%;
+    }
+}
+
+.tick {
+    @include rotate-animation;
+    background: white;
+    border: solid white 1px;
+    border-radius: 100px;
+    color: color(tertiary);
+    height: 20px;
+    padding-left: 4px;
+    padding-top: 3px;
+    width: 18px;
 }
 
 .item-name {
     font-size: 15px;
+    font-weight: bolder;
+    width: 100%;
 }
 
 .description-and-price-container {
@@ -71,5 +127,35 @@
 .item-description {
     font-size: 13px;
     font-weight: 300;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.price {
+    font-size: 13px;
+    font-weight:bolder;
+}
+
+.order-button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.order-button-container .btn {
+    width: 160px;
+}
+
+.fa-heart {
+    font-size: 1.5rem;
+    transition: font-weight, color 0.9s ease-in-out;
+    padding-right: 20px;
+    cursor: pointer;
+    &:hover {
+        @include heart-beat-animation;
+        font-weight: 700;
+        color:red;
+    }
 }
 

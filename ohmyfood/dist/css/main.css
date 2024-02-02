@@ -1,3 +1,42 @@
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes heart-beat {
+  0% {
+    font-size: 1rem;
+  }
+  50% {
+    font-size: 1.2rem;
+  }
+  100% {
+    font-size: 1rem;
+  }
+}
 html {
   background: #F6F6F6;
 }
@@ -48,20 +87,6 @@ header {
   rotate: 270deg;
   scale: 0.7;
   color: #101010;
-}
-
-.fa-heart {
-  color: linear-gradient(to top, #9356DC, #FF79DA);
-}
-
-.heart-button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
 }
 
 .footer {

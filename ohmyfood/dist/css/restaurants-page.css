@@ -1,3 +1,42 @@
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes heart-beat {
+  0% {
+    font-size: 1.5rem;
+  }
+  50% {
+    font-size: 1.7rem;
+  }
+  100% {
+    font-size: 1.5rem;
+  }
+}
 .restaurant-img {
   height: 240px;
   -o-object-fit: cover;
@@ -9,7 +48,8 @@
   background: #F6F6F6;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
-  padding: 25px 10px 15px 10px;
+  height: auto;
+  padding: 25px 0px 15px 0px;
   transform: translate(0, -55px);
 }
 
@@ -27,21 +67,43 @@
   font-family: Shrikhand;
   font-size: 25px;
   color: #101010;
-}
-
-.fa-heart-o { /** add this code to config once done to avoid repitition**/
-  color: black;
-  scale: 1.3;
-}
-.fa-heart-o:hover {
-  color: red;
+  padding-left: 10px;
 }
 
 .starters-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-top: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: auto;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 10px 12px 30px 10px;
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+}
+
+.mains-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: auto;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 10px 12px 30px 10px;
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+}
+
+.desserts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: auto;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 10px 12px 30px 10px;
+  animation: fadeInAnimation ease 2.5s;
+  animation-iteration-count: 1;
 }
 
 .menu-title {
@@ -50,19 +112,80 @@
   font-weight: 300;
   font-size: 14px;
   padding-bottom: 5px;
-  margin-right: 265px;
+  margin-right: 275px;
+  margin-left: 10px;
 }
 
 .menu-item {
-  box-shadow: 6px 8px 14px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 2px 4px 0 rgba(0, 0, 0, 0.2);
   background: white;
-  border-radius: 15px;
+  border-radius: 12px;
   font-family: Roboto;
-  padding: 10px;
+  padding: 14px;
+  width: 100%;
+}
+
+.item-tick-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  width: 100%;
+}
+
+.menu-item1 {
+  box-shadow: 4px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background: white;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-family: Roboto;
+  height: 35px;
+  padding: 14px;
+  width: 700px;
+}
+:hover > .menu-item1 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tick-container {
+  display: none;
+}
+:hover > .tick-container {
+  box-shadow: 4px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  animation: slide-left ease 1s;
+  background: #99E2D0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-family: Roboto;
+  padding: 14px;
+  height: 35px;
+  width: 10%;
+}
+
+.tick {
+  animation: rotate ease 1.5s;
+  background: white;
+  border: solid white 1px;
+  border-radius: 100px;
+  color: #99E2D0;
+  height: 20px;
+  padding-left: 4px;
+  padding-top: 3px;
+  width: 18px;
 }
 
 .item-name {
   font-size: 15px;
+  font-weight: bolder;
+  width: 100%;
 }
 
 .description-and-price-container {
@@ -76,4 +199,35 @@
 .item-description {
   font-size: 13px;
   font-weight: 300;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price {
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+.order-button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.order-button-container .btn {
+  width: 160px;
+}
+
+.fa-heart {
+  font-size: 1.5rem;
+  transition: font-weight, color 0.9s ease-in-out;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.fa-heart:hover {
+  animation: heart-beat ease 1s;
+  animation-iteration-count: 1;
+  font-weight: 700;
+  color: red;
 }/*# sourceMappingURL=restaurants-page.css.map */

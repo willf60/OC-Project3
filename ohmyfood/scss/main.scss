@@ -10,8 +10,11 @@ body {
 
 header {
     @include flexCenter(row);
+    @include fade-in-animation-fast;
     background: white;
     padding: 20px 50px 10px 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .return-button {

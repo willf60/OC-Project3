@@ -2,9 +2,11 @@
 
 
 .restaurant-img {
+    @include image-load-animation;
     height: 240px;
     object-fit:cover;
     width: 100%;
+    z-index: -1;
 }
 
 .restaurant-page {
@@ -48,18 +50,8 @@
     font-family: font(text);
     font-weight: 300;
     font-size: 14px;
-    padding-bottom: 5px;
-    margin-right: 275px;
-    margin-left: 10px;
-}
-
-.menu-item {
-    @include shadow;
-    background: white;
-    border-radius: 12px;
-    font-family: font(text);
-    padding: 14px;
-    width: 100%;
+    transform: translateX(20px);
+    width: 35px;
 }
 
 .item-tick-container {
@@ -68,7 +60,7 @@
     width: 100%;
 }
 
-.menu-item1 {
+.menu-item {
     @include shadow;
     background: white;
     border-top-left-radius: 12px;

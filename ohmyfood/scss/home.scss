@@ -6,8 +6,8 @@ header {
 }
 
 .return-button {
-    display:none;
-} 
+    display: none;
+}
 
 .chosen-location {
     @include flexCenter(row);
@@ -74,9 +74,9 @@ header {
     color: white;
     font-family: font (text);
     font-size: 13px;
+    height: 18px;
     transform: translate(13px);
     width: 18px;
-    height: 18px;
 }
 
 .step-content-container {
@@ -85,9 +85,10 @@ header {
     border-radius: 20px;
     display: flex;
     font-family: font(text);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 450;
     height: 70px;
+    text-wrap: wrap;
     width: 280px;
 }
 
@@ -126,10 +127,14 @@ header {
 }
 
 .card-container { 
+    @include remove-button-style;
     display: flex;
     flex-direction: column;
-    width: 285px;
     height: 200px;
+    width: 285px;
+    &:hover {
+        transform: scale(1.02);
+    }
 }
 
 .restaurant-img {
@@ -193,9 +198,7 @@ header {
     cursor: pointer;
     &:hover {
         @include heart-beat-animation;  
-        color: transparent;
-        background-clip: text;
-        background-image: linear-gradient(to bottom, color(primary), color(secondary));
+        @include fa-icon-add-gradient;
         font-weight: 700;
         
     }

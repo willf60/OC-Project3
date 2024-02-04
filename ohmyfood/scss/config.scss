@@ -1,3 +1,4 @@
+/** colors **/
 $colors: (
     "primary": #9356DC,
     "secondary": #FF79DA,
@@ -11,7 +12,7 @@ $colors: (
 @function color($color-name) {
     @return map-get($colors, $color-name);
 }
-
+/** fonts **/
 $fonts: (
     "title": Shrikhand,
     "text": Roboto
@@ -21,14 +22,16 @@ $fonts: (
     @return map-get($fonts, $font-name);
 }
 
+/** mixins **/
 @mixin remove-button-style {
     background: none;
+    border: none;
 	color: inherit;
-	border: none;
-	padding: 0;
+    cursor: pointer;
 	font: inherit;
-	cursor: pointer;
+    padding: 0;
 	outline: inherit;
+    text-decoration: none;
 }
 
 @mixin flexCenter($direction) {
@@ -84,12 +87,30 @@ $fonts: (
     font-family: font(title);
     font-size: 25px;
     color: #101010;
-
 }
+
+@mixin item-container-format {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: auto;
+    justify-content: space-between;
+    overflow:hidden;
+    padding: 10px 12px 30px 10px;
+}
+
+@mixin fa-icon-add-gradient {
+        background-clip: text;
+        background-image: linear-gradient(to bottom, color(primary), color(secondary));
+        color: transparent;
+}
+
+/** animations **/
 
 @mixin slide-left-animation {
     animation: slide-left ease 1s;
 }
+
 
 @keyframes slide-left {
     from {
@@ -113,16 +134,6 @@ $fonts: (
     to {
         transform: rotate(0deg);
     }
-}
-
-@mixin item-container-format {
-    display:flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    height: auto;
-    justify-content: space-between;
-    overflow:hidden;
-    padding: 10px 12px 30px 10px;
 }
 
  @mixin fade-in-animation-fast {

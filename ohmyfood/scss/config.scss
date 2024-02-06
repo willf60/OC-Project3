@@ -111,7 +111,6 @@ $fonts: (
     animation: slide-left ease 1s;
 }
 
-
 @keyframes slide-left {
     from {
         opacity: 0;
@@ -136,7 +135,7 @@ $fonts: (
     }
 }
 
- @mixin fade-in-animation-fast {
+@mixin fade-in-animation-fast {
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
 
@@ -192,3 +191,35 @@ $fonts: (
         transform: scale(1);
     }
 }
+
+@mixin loader-animation {
+    animation: loader 4s linear;
+}
+
+@keyframes loader {
+    0% {
+      transform: rotate(0); 
+    }
+
+    100% {
+      transform: rotate(720deg);
+    } 
+}
+
+@mixin hide-loader-animation {
+    animation: hide-loader 4s linear;
+    animation-fill-mode: forwards;
+}
+  
+  @keyframes hide-loader {
+    0% {
+        opacity: 1; 
+    }
+
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0; 
+    } 
+  }

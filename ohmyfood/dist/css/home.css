@@ -1,3 +1,4 @@
+/** ohmyfood homepage scss **/
 /** colors **/
 /** fonts **/
 /** mixins **/
@@ -69,31 +70,28 @@
     display: none;
   }
 }
+/** loading screen **/
 .loader-container {
-  animation: hide-loader 4s linear;
+  animation: hide-loader 0.5s linear;
   animation-fill-mode: forwards;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #fff;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
   z-index: 1;
 }
 
 .loader-logo {
-  animation: loader 4s linear;
-  width: 100px;
-  height: 100px;
+  animation: loader 0.5s linear;
   border: 20px solid #9356DC;
-  border-top: 20px solid #FF79DA;
   border-bottom: 20px solid #FF79DA;
+  border-top: 20px solid #FF79DA;
   border-radius: 50%;
+  height: 100px;
+  width: 100px;
 }
 
 .loader-slogan {
@@ -108,35 +106,37 @@ header {
   padding: 20px 8px 10px;
 }
 
+/** remove header return button **/
 .return-button {
   display: none;
 }
 
+/** user location section **/
 .chosen-location {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background: #EAEAEA;
-  padding: 15px;
   font-family: Roboto;
   font-size: 14px;
+  padding: 15px;
 }
 
 .fa-map-marker-alt {
-  padding-right: 10px;
   color: #353535;
+  padding-right: 10px;
 }
 
 .slogan-and-explore {
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  animation: fadeInAnimation ease 0.5s;
-  animation-iteration-count: 1;
-  justify-content: space-around;
   height: 200px;
+  justify-content: space-around;
   padding: 20px 0 40px;
 }
 
@@ -156,6 +156,7 @@ header {
   width: 200px;
 }
 
+/** how it works section **/
 .instructions-section {
   animation: fadeInAnimation ease 1.5s;
   animation-iteration-count: 1;
@@ -163,8 +164,6 @@ header {
   display: flex;
   flex-direction: column;
   height: 400px;
-  padding-left: 10%;
-  padding-right: 10%;
 }
 
 .instructions-title {
@@ -172,6 +171,7 @@ header {
   font-size: 22px;
   font-weight: 500;
   padding-top: 40px;
+  padding-left: 110px;
 }
 
 .steps-master-container {
@@ -224,8 +224,8 @@ header {
 }
 
 .fa-mobile, .fa-list, .fa-shop {
-  padding: 0 20px 0 30px;
   align-self: center;
+  padding: 0 20px 0 30px;
 }
 
 .fa-mobile, .fa-list {
@@ -236,6 +236,7 @@ header {
   color: #9356DC;
 }
 
+/** restaurants section **/
 .restaurants {
   animation: fadeInAnimation ease 2.5s;
   animation-iteration-count: 1;
@@ -247,7 +248,7 @@ header {
   font-family: Roboto;
   font-size: 22px;
   font-weight: 500;
-  padding: 40px 0px 20px 15px;
+  padding: 40px 0 20px 0px;
 }
 
 .restaurants-master-container {
@@ -279,6 +280,10 @@ header {
   transform: scale(1.02);
 }
 
+.card-topsection {
+  height: 160px;
+}
+
 .restaurant-img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -288,14 +293,25 @@ header {
   width: 100%;
 }
 
-.card-topsection {
-  height: 160px;
+.new-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #99E2D0;
+  border-radius: 2px;
+  color: #008766;
+  font-family: Roboto;
+  font-size: 11px;
+  height: 22px;
+  transform: translate(210px, -155px);
+  width: 62px;
 }
 
 .restaurant-card-subsection {
+  background: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -320,21 +336,6 @@ header {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 300;
-}
-
-.new-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  background: #99E2D0;
-  border-radius: 2px;
-  color: #008766;
-  font-family: Roboto;
-  font-size: 11px;
-  height: 22px;
-  transform: translate(210px, -155px);
-  width: 62px;
 }
 
 .fa-heart {

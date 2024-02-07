@@ -1,94 +1,81 @@
+/** ohmyfood homepage scss **/
 @import 'config';
 
+/** loading screen **/
 .loader-container {
     @include hide-loader-animation;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #fff;
-    position:fixed;
-    left:0;
-    top:0;
-    right:0;
-    bottom:0;
-    z-index: 1;
- }
+    display: flex;
+    flex-direction: column;
+    inset: 0;
+    justify-content: center;
+    position: absolute;
+    z-index: 1; }
 
 .loader-logo {
     @include loader-animation;
-    width: 100px;
-    height: 100px;
     border: 20px solid color(primary);
-    border-top: 20px solid color(secondary);
     border-bottom: 20px solid color(secondary);
-    border-radius: 50%;
-} 
+    border-top: 20px solid color(secondary);
+    border-radius: 50%; 
+    height: 100px; 
+    width: 100px; }
 
 .loader-slogan {
     @include homepage-title;
-    padding-top: 30px;
-}
+    padding-top: 30px; }
       
 header {
     background: white;
-    padding: 20px 8px 10px;
-}
+    padding: 20px 8px 10px; }
 
+/** remove header return button **/
 .return-button {
-    display: none;
-}
+    display: none; }
 
+/** user location section **/
 .chosen-location {
     @include flexCenter(row);
-    background: color(darker-backdrop);
-    padding: 15px; 
+    background: color(darker-backdrop); 
     font-family: font(text);
     font-size: 14px;
-}
+    padding: 15px; }
 
 .fa-map-marker-alt {
-    padding-right: 10px;
     color: #353535;
-}
+    padding-right: 10px; }
 
 .slogan-and-explore {
-    @include flexCenter(column);
     @include fade-in-animation-fast;
-    justify-content: space-around;
+    @include flexCenter(column);
     height: 200px;
-    padding: 20px 0 40px;
-}
+    justify-content: space-around;
+    padding: 20px 0 40px; }
 
 .slogan-big {
-    @include homepage-title;
-}
+    @include homepage-title; }
     
 .slogan-small {
     font-family: font(text);
     font-weight: 200;
-    text-align: center; 
-}
+    text-align: center; }
 
 .btn {
-    width: 200px;
-}
+    width: 200px; }
 
+/** how it works section **/
 .instructions-section {
     @include fade-in-animation-slow;
     background: white;
     display: flex;
     flex-direction: column;
-    height: 400px;
-    padding-left: 10%;
-    padding-right: 10%;
-}
+    height: 400px; }
 
 .instructions-title {
     @include homepage-title;
     padding-top: 40px;
-}
+    padding-left: 110px; }
 
 .steps-master-container {
     display: flex;
@@ -96,12 +83,10 @@ header {
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 270px;
-    padding-top: 15px;
-}
+    padding-top: 15px; }
 
 .step-number-and-text-container {
-    @include flexCenter(row); 
-}
+    @include flexCenter(row); }
 
 .step-number {
     @include flexCenter(row);
@@ -113,8 +98,7 @@ header {
     font-size: 13px;
     height: 18px;
     transform: translate(13px);
-    width: 18px;
-}
+    width: 18px; }
 
 .step-content-container {
     @include shadow;
@@ -126,43 +110,36 @@ header {
     font-weight: 450;
     height: 70px;
     text-wrap: wrap;
-    width: 280px;
-}
+    width: 280px; }
 
 .step-text {
-    align-self: center;
-}
+    align-self: center; }
 
 .fa-mobile, .fa-list, .fa-shop {
-    padding: 0 20px 0 30px;
     align-self: center;
-}
+    padding: 0 20px 0 30px; }
 
 .fa-mobile, .fa-list {
-    color: grey;
-}
+    color: grey; }
 .fa-shop {
-    color: color(primary);
-}
+    color: color(primary); }
 
+/** restaurants section **/
 .restaurants {
     @include fade-in-animation-slower;
     height: auto;
-    padding: 0 0 65px 0;
-}
+    padding: 0 0 65px 0; }
 
 .restaurants-title {
     @include homepage-title;
-    padding: 40px 0px 20px 15px;
-}
+    padding: 40px 0 20px 0px; }
 
 .restaurants-master-container {
     @include flexCenter(row);
     flex-wrap: wrap;
     gap: 50px;
     height: auto;
-    justify-content: space-evenly;
-}
+    justify-content: space-evenly; }
 
 .card-container { 
     @include remove-button-style;
@@ -171,51 +148,17 @@ header {
     height: 200px;
     width: 285px;
     &:hover {
-        transform: scale(1.02);
-    }
-}
+        transform: scale(1.02); } }
+
+.card-topsection {
+    height: 160px; }
 
 .restaurant-img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 100%;
     object-fit: cover;
-    width: 100%;
-}
-
-.card-topsection {
-    height: 160px;
-}
-
-.restaurant-card-subsection {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: white;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
-}
-
-.restaurant-card-info {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    justify-content: flex-start;
-    width: 50%;
-}
-
-.card-restaurant-name {
-    font-family: font(text);
-    font-size: 14px;
-    font-weight: 550;
-}
-
-.card-restaurant-location {
-    font-family: font(text);
-    font-size: 14px;
-    font-weight: 300;
-}
+    width: 100%; }
 
 .new-tag {
     @include flexCenter(row);
@@ -226,8 +169,33 @@ header {
     font-size: 11px;
     height: 22px;
     transform: translate(210px, -155px);
-    width: 62px;
-}
+    width: 62px; }
+
+.restaurant-card-subsection {
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px; }
+
+.restaurant-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
+    width: 50%; }
+
+.card-restaurant-name {
+    font-family: font(text);
+    font-size: 14px;
+    font-weight: 550; }
+
+.card-restaurant-location {
+    font-family: font(text);
+    font-size: 14px;
+    font-weight: 300; }
 
 .fa-heart {
     align-self: center;
@@ -237,10 +205,7 @@ header {
     &:hover {
         @include heart-beat-animation;  
         @include fa-icon-add-gradient;
-        font-weight: 700;
-        
-    }
-}
+        font-weight: 700; } }
 
 /** media queries **/
 

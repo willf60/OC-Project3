@@ -1,12 +1,11 @@
+/** universal scss **/
 @import 'config';
 
 html {
-    background:color(backdrop);
-}
+    background:color(backdrop); }
 
 body {
-    @include reset;
-}
+    @include reset; }
 
 header {
     @include flexCenter(row);
@@ -14,8 +13,7 @@ header {
     background: white;
     padding: 20px 50px 10px 10px;
     position: relative;
-    z-index: 1;
-}
+    z-index: 1; }
 
 .return-button {
     @include flexCenter(row);
@@ -23,40 +21,32 @@ header {
     color: #101010;
     rotate: 270deg;
     scale: 0.9;
-    transform: translate(0px, -150px);
+    transform: translate(0px, -130px);
     &:hover {
-        @include fa-icon-add-gradient;
-    }
-}
+        @include fa-icon-add-gradient; } }
 
 .logo-container {
     display: flex;
-    justify-content: space-around;
-}
+    justify-content: space-around; }
 
 .logo {
-    height: 27px;
-}
+    height: 27px; }
 
 .btn {
     @include button-gradient-background;
     @include btn-static;
     cursor: pointer;
     &:hover{
-        @include btn-hover-effect
-    }
-}
+        @include btn-hover-effect } }
 
 .footer {
     margin: 0;
-    padding: 0;
-}
+    padding: 0; }
 
 .footer-logo {
     @include whiteFilter;
     height: 16px;
-    padding-bottom: 15px;
-}
+    padding-bottom: 15px; }
 
 .footer-content {
     background: color(footer-backdrop);
@@ -64,29 +54,22 @@ header {
     color: white;
     font-family: font(text);
     font-size: 15px;
-    font-weight: 350;
-}
+    font-weight: 350; }
 
 .footer-line {
     padding: 3px;
     cursor: pointer;
     &:hover {
-        font-weight: bold;
-    }
-}
+        font-weight: bold; } }
 
 .email-button {
     @include remove-button-style;
     &:hover {
-        font-weight: bold;
-    }
-}
+        font-weight: bold; } }
 
 .fa-cutlery {
-    padding-right: 12px;
-}
+    padding-right: 12px; }
 
 .fa-handshake {
     padding-right: 10px;
-    rotate: 315deg;
-}
+    rotate: 315deg; }

@@ -1,98 +1,88 @@
+/** restaurant page scss **/
 @import 'config';
-
 
 .restaurant-img {
     @include image-load-animation;
     height: 240px;
     object-fit:cover;
     width: 100%;
-    z-index: -1;
-}
+    z-index: -1; }
 
-.restaurant-page {
+.restaurant-menu {
     background: color(backdrop);
-    border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     height: auto;
-    padding: 25px 0px 15px 0px;
-    transform: translate(0, -55px);
-}
+    padding: 25px 0 15px 0;
+    transform: translate(0, -55px); }
 
 .title-and-heart {
     @include flexCenter(row);
     justify-content: space-between;
-    width: 95%;
     padding: 0 0 20px 5px;
-}
+    width: 95%; }
 
 .restaurant-title {
     @include restaurant-page-title;
-    padding-left: 10px;
-}
+    padding-left: 10px; }
+
+.fa-heart {
+    font-size: 1.5rem;
+    padding-right: 20px;
+    transition: font-weight, color 0.9s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        @include heart-beat-animation;
+        color:red;
+        font-weight: 700; } }
 
 .starters-container {
-    @include item-container-format;
-    @include fade-in-animation-fast
-}
+    @include fade-in-animation-fast;
+    @include item-container-format; }
 
 .mains-container {
-    @include item-container-format;
     @include fade-in-animation-slow;
-}
+    @include item-container-format; }
 
 .desserts-container {
-    @include item-container-format;
     @include fade-in-animation-slower;
-}
+    @include item-container-format; }
 
 .menu-title {
     border-bottom: 3px solid color(tertiary);
     font-family: font(text);
-    font-weight: 300;
     font-size: 14px;
+    font-weight: 300;
     transform: translateX(20px);
-    width: 35px;
-}
+    width: 35px; }
 
 .item-tick-container {
     @include flexCenter(row);
     cursor: pointer;
-    flex-wrap: no-wrap;
-    width: 100%;
-}
+    width: 100%; }
 
 .menu-item {
     @include shadow;
     background: white;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-radius: 12px;
     font-family: font(text);
     height: 35px;
     padding: 14px;
     width: 700px;
     :hover > & {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-}
+        border-radius: 12px 0 0 12px; } }
 
 .tick-container {
     display: none;
     :hover > & { 
-        @include shadow;
         @include flexCenter(row);
+        @include shadow;
         @include slide-left-animation;
         background: color(tertiary);
-        border-top-right-radius: 12px;
-        border-bottom-right-radius: 12px;
+        border-radius: 0 12px 12px 0;
         font-family: font(text);
-        padding: 14px;
         height: 35px;
-        width: 10%;
-    }
-}
+        padding: 14px; } }
 
 .tick {
     @include rotate-animation;
@@ -101,54 +91,35 @@
     border-radius: 100px;
     color: color(tertiary);
     height: 20px;
-    padding-left: 4px;
-    padding-top: 3px;
-    width: 18px;
-}
+    padding: 3px 0 0 4px;
+    width: 18px; }
 
 .item-name {
     font-size: 15px;
     font-weight: bolder;
-    width: 100%;
-}
+    width: 100%; }
 
 .description-and-price-container {
     @include flexCenter(row);
-    justify-content: space-between;
-}
+    justify-content: space-between; }
 
 .item-description {
     font-size: 13px;
     font-weight: 300;
     overflow: hidden;
-    width: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
+    width: 100%; }
 
 .price {
     font-size: 13px;
-    font-weight:bolder;
-}
+    font-weight:bolder; }
 
 .order-button-container {
     display: flex;
     justify-content: space-evenly;
 }
 
-.order-button-container .btn {
-    width: 160px;
-}
-
-.fa-heart {
-    font-size: 1.5rem;
-    transition: font-weight, color 0.9s ease-in-out;
-    padding-right: 20px;
-    cursor: pointer;
-    &:hover {
-        @include heart-beat-animation;
-        font-weight: 700;
-        color:red;
-    }
-}
+.btn {
+    width: 160px; }
 

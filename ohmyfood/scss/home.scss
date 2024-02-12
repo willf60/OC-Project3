@@ -1,6 +1,9 @@
 /** ohmyfood homepage scss **/
 @import 'config';
 
+html,body
+    { @include reset; } 
+
 /** loading screen **/
 .loader-container {
     @include hide-loader-animation;
@@ -24,7 +27,9 @@
 
 .loader-slogan {
     @include homepage-title;
-    padding-top: 30px; }
+    max-width: 300px;
+    padding-top: 30px;
+    text-align: center; }
       
 header {
     background: white;
@@ -49,6 +54,7 @@ header {
 .slogan-and-explore {
     @include fade-in-animation-fast;
     @include flexCenter(column);
+    animation-delay: 2.25s;
     height: 200px;
     justify-content: space-around;
     padding: 20px 0 40px; }
@@ -67,23 +73,29 @@ header {
 /** how it works section **/
 .instructions-section {
     @include fade-in-animation-slow;
+    animation-delay: 2.25s;
     background: white;
     display: flex;
     flex-direction: column;
-    height: 400px; }
+    height: auto;
+    padding-right: 20px; }
 
 .instructions-title {
     @include homepage-title;
-    padding-top: 40px;
-    padding-left: 110px; }
+    padding-top: 30px;
+    width: 100%; }
 
 .steps-master-container {
+    align-self: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px;
+    height: auto;
     justify-content: space-evenly;
-    height: 270px;
-    padding-top: 15px; }
+    max-width: 240px;
+    padding-bottom: 30px;
+    width: 80%; }
 
 .step-number-and-text-container {
     @include flexCenter(row); }
@@ -127,37 +139,46 @@ header {
 /** restaurants section **/
 .restaurants {
     @include fade-in-animation-slower;
-    height: auto;
-    padding: 0 0 65px 0; }
+    animation-delay: 2.5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto; }
 
 .restaurants-title {
     @include homepage-title;
-    padding: 40px 0 20px 0px; }
+    padding: 30px 0 0px 0px;
+    width: 100%;}
 
 .restaurants-master-container {
     @include flexCenter(row);
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 25px;
     height: auto;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    padding-bottom: 50px; 
+    width: 80%;}
 
 .card-container { 
     @include remove-button-style;
     display: flex;
     flex-direction: column;
-    height: 200px;
-    width: 285px;
+    max-width: 700px;
+    width: 100%;
     &:hover {
         transform: scale(1.02); } }
 
 .card-topsection {
-    height: 160px; }
+    height: 160px;
+    display: flex; 
+    position: relative;}
 
 .restaurant-img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 100%;
     object-fit: cover;
+    position: relative;
     width: 100%; }
 
 .new-tag {
@@ -168,8 +189,10 @@ header {
     font-family: font(text);
     font-size: 11px;
     height: 22px;
-    transform: translate(210px, -155px);
-    width: 62px; }
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 62px; } 
 
 .restaurant-card-subsection {
     background: white;
@@ -190,7 +213,10 @@ header {
 .card-restaurant-name {
     font-family: font(text);
     font-size: 14px;
-    font-weight: 550; }
+    font-weight: 550;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
 
 .card-restaurant-location {
     font-family: font(text);
@@ -209,14 +235,32 @@ header {
 
 /** media queries **/
 
-@media screen and (min-width: 381px) {
-    .restaurants-title {
-     margin-left: 120px;
-        
+@media screen and (min-width: 500px) {
+    .loader-slogan {
+        max-width: 400px;   
+    }
+}
+
+@media screen and (min-width: 781px) {
+    .card-container {
+        width: 48%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .restaurants-master-container {
+        max-width: 946px;   
+    }
+}
+
+@media screen and (min-width: 1203px) {
+    .steps-master-container {
+        max-width: 946px;
     }
 }
 
 
+ 
 
 
 

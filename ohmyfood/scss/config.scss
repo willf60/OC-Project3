@@ -31,8 +31,11 @@ $fonts: (
 
 /** reset page margins **/
 @mixin reset {
-    margin: 0;
-    padding: 0; }
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; }
 
 /** button mixins **/
 @mixin remove-button-style {
@@ -80,20 +83,11 @@ $fonts: (
     font-family: font(title);
     font-size: 25px; }
 
-@mixin item-container-format {
-    display:flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    height: auto;
-    justify-content: space-between;
-    overflow:hidden;
-    padding: 10px 12px 30px 10px; }
-
 /** animations + animation mixins **/
 
 /** loader **/
 @mixin loader-animation {
-    animation: loader 0.5s linear; }
+    animation: loader 3s linear; }
 
 @keyframes loader {
     0% {
@@ -103,7 +97,7 @@ $fonts: (
       transform: rotate(720deg); } }
 
 @mixin hide-loader-animation {
-    animation: hide-loader 0.5s linear;
+    animation: hide-loader 3s linear;
     animation-fill-mode: forwards; }
   
   @keyframes hide-loader {
@@ -115,7 +109,7 @@ $fonts: (
     100% {
         display: none;
         opacity: 0; } }
-        
+
 /** for menu item tick container**/
 @mixin slide-left-animation {
     animation: slide-left ease 1s; }

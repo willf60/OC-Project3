@@ -1,55 +1,13 @@
 /** restaurant page scss **/
-/** colors **/
-/** fonts **/
+/** colors array/call function **/
+/** fonts array/call function **/
 /** mixins **/
-/** animations **/
-@keyframes slide-left {
-  from {
-    opacity: 0;
-    transform: translateX(10px);
-  }
-  to {
-    opacity: 100%;
-    transform: translateX(0px);
-  }
-}
-@keyframes rotate {
-  from {
-    transform: rotate(45deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px) scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
-}
-@keyframes heart-beat {
-  0% {
-    font-size: 1.5rem;
-  }
-  50% {
-    font-size: 1.7rem;
-  }
-  100% {
-    font-size: 1.5rem;
-  }
-}
-@keyframes image-load {
-  0% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+/** white filter for logo in footer **/
+/** reset page margins **/
+/** button mixins **/
+/** text formatting mixins **/
+/** animations + animation mixins **/
+/** loader **/
 @keyframes loader {
   0% {
     transform: rotate(0);
@@ -66,10 +24,82 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
     display: none;
+    opacity: 0;
   }
 }
+/** for menu item tick container**/
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+/** for menu item tick **/
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/** for starters, mains, and dessert loading times**/
+/** for header + starters, mains, desserts**/
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+/** for heart button**/
+@keyframes heart-beat {
+  0% {
+    font-size: 1.5rem;
+  }
+  50% {
+    font-size: 1.7rem;
+  }
+  100% {
+    font-size: 1.5rem;
+  }
+}
+/** for restaurant image**/
+@keyframes image-load {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.logo {
+  padding-left: 40px;
+}
+
+.restaurant-page {
+  background: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .restaurant-img {
   animation: image-load ease-out 2s;
   height: 240px;
@@ -79,13 +109,28 @@
   z-index: -1;
 }
 
-.restaurant-menu {
+.restaurant-menu-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background: #F6F6F6;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   height: auto;
+  max-width: 1106px;
   padding: 25px 0 15px 0;
   transform: translate(0, -55px);
+  width: 100%;
+}
+
+.restaurant-menu-master {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 728px;
+  width: 90%;
 }
 
 .title-and-heart {
@@ -94,14 +139,15 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 408px;
   padding: 0 0 20px 5px;
   width: 95%;
 }
 
 .restaurant-title {
+  color: #101010;
   font-family: Shrikhand;
   font-size: 25px;
-  color: #101010;
   padding-left: 10px;
 }
 
@@ -118,49 +164,27 @@
   font-weight: 700;
 }
 
-.starters-container {
+.item-group-container { /** starters/mains/desserts**/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
   height: auto;
   justify-content: space-between;
-  overflow: hidden;
-  padding: 10px 12px 30px 10px;
-}
-
-.mains-container {
-  animation: fadeInAnimation ease 1.5s;
-  animation-iteration-count: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  height: auto;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: 10px 12px 30px 10px;
-}
-
-.desserts-container {
-  animation: fadeInAnimation ease 2.5s;
-  animation-iteration-count: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  height: auto;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: 10px 12px 30px 10px;
+  padding: 10px 0 20px 0;
+  width: 100%;
 }
 
 .menu-title {
+  align-self: flex-start;
   border-bottom: 3px solid #99E2D0;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 300;
-  transform: translateX(20px);
-  width: 35px;
 }
 
 .item-tick-container {

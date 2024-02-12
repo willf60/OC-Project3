@@ -11,6 +11,7 @@ header {
     @include flexCenter(row);
     @include fade-in-animation-fast;
     background: white;
+    height: 35px;
     padding: 20px 50px 10px 10px;
     position: relative;
     z-index: 1; }
@@ -19,15 +20,13 @@ header {
     @include flexCenter(row);
     @include remove-button-style;
     color: #101010;
+    position: absolute;
     rotate: 270deg;
     scale: 0.9;
-    transform: translate(0px, -130px);
+    left: 20px;
+    top: 35px;
     &:hover {
         @include fa-icon-add-gradient; } }
-
-.logo-container {
-    display: flex;
-    justify-content: space-around; }
 
 .logo {
     height: 27px; }

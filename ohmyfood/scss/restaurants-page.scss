@@ -1,6 +1,20 @@
 /** restaurant page scss **/
 @import 'config';
 
+html,body
+    { @include reset; } 
+
+.logo {
+    padding-left: 40px;
+}
+
+.restaurant-page {
+    background: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .restaurant-img {
     @include image-load-animation;
     height: 240px;
@@ -8,17 +22,27 @@
     width: 100%;
     z-index: -1; }
 
-.restaurant-menu {
+.restaurant-menu-background {
+    @include flexCenter(column);
     background: color(backdrop);
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     height: auto;
+    max-width: 1106px;
     padding: 25px 0 15px 0;
-    transform: translate(0, -55px); }
+    transform: translate(0, -55px);
+    width: 100%; }
+
+.restaurant-menu-master {
+    @include flexCenter(column);
+    max-width: 728px;
+    width: 90%;
+}
 
 .title-and-heart {
     @include flexCenter(row);
     justify-content: space-between;
+    max-width: 408px;
     padding: 0 0 20px 5px;
     width: 95%; }
 
@@ -36,25 +60,22 @@
         color:red;
         font-weight: 700; } }
 
-.starters-container {
+.item-group-container {   /** starters/mains/desserts**/
+    @include flexCenter(column);
     @include fade-in-animation-fast;
-    @include item-container-format; }
-
-.mains-container {
-    @include fade-in-animation-slow;
-    @include item-container-format; }
-
-.desserts-container {
-    @include fade-in-animation-slower;
-    @include item-container-format; }
+    display:flex;
+    gap: 10px;
+    height: auto;
+    justify-content: space-between;
+    padding: 10px 0 20px 0;
+    width: 100%; }
 
 .menu-title {
+    align-self: flex-start;
     border-bottom: 3px solid color(tertiary);
     font-family: font(text);
     font-size: 14px;
-    font-weight: 300;
-    transform: translateX(20px);
-    width: 35px; }
+    font-weight: 300; }
 
 .item-tick-container {
     @include flexCenter(row);
@@ -122,4 +143,6 @@
 
 .btn {
     width: 160px; }
+
+
 

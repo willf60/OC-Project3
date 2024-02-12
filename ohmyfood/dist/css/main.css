@@ -1,55 +1,13 @@
 /** universal scss **/
-/** colors **/
-/** fonts **/
+/** colors array/call function **/
+/** fonts array/call function **/
 /** mixins **/
-/** animations **/
-@keyframes slide-left {
-  from {
-    opacity: 0;
-    transform: translateX(10px);
-  }
-  to {
-    opacity: 100%;
-    transform: translateX(0px);
-  }
-}
-@keyframes rotate {
-  from {
-    transform: rotate(45deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(-30px) scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
-}
-@keyframes heart-beat {
-  0% {
-    font-size: 1.5rem;
-  }
-  50% {
-    font-size: 1.7rem;
-  }
-  100% {
-    font-size: 1.5rem;
-  }
-}
-@keyframes image-load {
-  0% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+/** white filter for logo in footer **/
+/** reset page margins **/
+/** button mixins **/
+/** text formatting mixins **/
+/** animations + animation mixins **/
+/** loader **/
 @keyframes loader {
   0% {
     transform: rotate(0);
@@ -66,8 +24,61 @@
     opacity: 1;
   }
   100% {
-    opacity: 0;
     display: none;
+    opacity: 0;
+  }
+}
+/** for menu item tick container**/
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+}
+/** for menu item tick **/
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/** for starters, mains, and dessert loading times**/
+/** for header + starters, mains, desserts**/
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+/** for heart button**/
+@keyframes heart-beat {
+  0% {
+    font-size: 1.5rem;
+  }
+  50% {
+    font-size: 1.7rem;
+  }
+  100% {
+    font-size: 1.5rem;
+  }
+}
+/** for restaurant image**/
+@keyframes image-load {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 html {
@@ -75,8 +86,11 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 header {
@@ -87,6 +101,7 @@ header {
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
   background: white;
+  height: 35px;
   padding: 20px 50px 10px 10px;
   position: relative;
   z-index: 1;
@@ -106,20 +121,17 @@ header {
   outline: inherit;
   text-decoration: none;
   color: #101010;
+  position: absolute;
   rotate: 270deg;
   scale: 0.9;
-  transform: translate(0px, -130px);
+  left: 20px;
+  top: 35px;
 }
 .return-button:hover {
   -webkit-background-clip: text;
           background-clip: text;
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   color: transparent;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: space-around;
 }
 
 .logo {

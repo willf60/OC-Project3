@@ -62,13 +62,24 @@ html,body
 
 .item-group-container {   /** starters/mains/desserts**/
     @include flexCenter(column);
-    @include fade-in-animation-fast;
     display:flex;
     gap: 10px;
     height: auto;
     justify-content: space-between;
     padding: 10px 0 20px 0;
+    visibility: hidden;
     width: 100%; }
+
+.item-group-container:nth-child(2){
+    @include fade-in-animation; }
+
+.item-group-container:nth-child(4){
+    @include fade-in-animation;
+    animation-delay: 0.25s; }
+
+.item-group-container:nth-child(6){
+    @include fade-in-animation;
+    animation-delay: 0.5s; }
 
 .menu-title {
     align-self: flex-start;
@@ -76,6 +87,7 @@ html,body
     font-family: font(text);
     font-size: 14px;
     font-weight: 300; }
+
 
 .item-tick-container {
     @include flexCenter(row);

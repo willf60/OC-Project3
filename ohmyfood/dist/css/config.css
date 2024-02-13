@@ -51,10 +51,12 @@
 /** for header + starters, mains, desserts**/
 @keyframes fadeInAnimation {
   0% {
+    visibility: visible;
     opacity: 0;
     transform: translateY(-30px) scale(1);
   }
   100% {
+    visibility: visible;
     opacity: 1;
     transform: translateY(0px) scale(1);
   }

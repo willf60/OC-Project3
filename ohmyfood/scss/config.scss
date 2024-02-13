@@ -133,24 +133,19 @@ $fonts: (
         transform: rotate(0deg); } }
 
 /** for starters, mains, and dessert loading times**/
-@mixin fade-in-animation-fast {
+@mixin fade-in-animation {
     animation: fadeInAnimation ease 0.5s;
-    animation-iteration-count: 1; }
-
-@mixin fade-in-animation-slow {
-    animation: fadeInAnimation ease 1.5s;
-    animation-iteration-count: 1; }
-
-@mixin fade-in-animation-slower {
-    animation: fadeInAnimation ease 2.5s;
+    animation-fill-mode: forwards;
     animation-iteration-count: 1; }
 
 /** for header + starters, mains, desserts**/
 @keyframes fadeInAnimation {
     0% {
+        visibility: visible;
         opacity: 0;
         transform: translateY(-30px) scale(1); }
     100% {
+        visibility: visible;
         opacity: 1;
         transform: translateY(0px) scale(1); } }
 

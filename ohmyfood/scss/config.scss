@@ -68,9 +68,9 @@ $fonts: (
     filter: brightness(110%); }
 
 @mixin fa-icon-add-gradient {
-        background-clip: text;
-        background-image: linear-gradient(to bottom, color(primary), color(secondary));
-        color: transparent; }
+    background-clip: text;
+    background-image: linear-gradient(to bottom, color(primary), color(secondary));
+    color: transparent; }
 
 /** text formatting mixins **/
 @mixin homepage-title {
@@ -141,13 +141,12 @@ $fonts: (
 /** for header + starters, mains, desserts**/
 @keyframes fadeInAnimation {
     0% {
-        visibility: visible;
         opacity: 0;
         transform: translateY(-30px) scale(1); }
     100% {
-        visibility: visible;
         opacity: 1;
-        transform: translateY(0px) scale(1); } }
+        transform: translateY(0px) scale(1); 
+        visibility: visible; } }
 
 /** for heart button**/
 @mixin heart-beat-animation {

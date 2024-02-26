@@ -82,6 +82,14 @@ footer {
 .fa-handshake {
     padding-right: 10px;
     rotate: 315deg; }
+
+.fa-heart {
+    font-size: 1.5rem;
+    transition: font-weight, color 0.9s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        @include heart-beat-animation; 
+        font-weight: 700; } }
     
 @media screen and (min-width: 769px) {
     .footer {

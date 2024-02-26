@@ -51,14 +51,9 @@ html,body
     padding-left: 20px; }
 
 .fa-heart {
-    font-size: 1.5rem;
     padding-right: 20px;
-    transition: font-weight, color 0.9s ease-in-out;
-    cursor: pointer;
     &:hover {
-        @include heart-beat-animation;
-        color:red;
-        font-weight: 700; } }
+        color:red; } }
 
 .item-group-container {   /** starters/mains/desserts**/
     @include flexCenter(column);

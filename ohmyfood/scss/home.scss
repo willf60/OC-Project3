@@ -230,13 +230,8 @@ header {
 
 .fa-heart {
     align-self: center;
-    font-size: 1.5rem;
-    transition: font-weight, color 0.9s ease-in-out;
-    cursor: pointer;
-    &:hover {
-        @include heart-beat-animation;  
-        @include fa-icon-add-gradient;
-        font-weight: 700; } }
+    &:hover { 
+        @include fa-icon-add-gradient; } }
 
 /** media queries **/
 
